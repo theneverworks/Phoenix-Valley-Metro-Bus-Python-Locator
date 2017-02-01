@@ -53,7 +53,7 @@ def findbus():
     finalresponse += "]"
     if finalresponse == "[]":
         finalresponse = "{'nobus':'" + busroute + "'}"
-    #x = json.loads(finalresponse)
+    response.headers['Content-Type'] = 'application/json' 
     return finalresponse
 
 if __name__ == "__main__":
